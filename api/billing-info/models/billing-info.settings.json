@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "billing_infos",
+  "info": {
+    "name": "Billing_info"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "card_no": {
+      "type": "integer"
+    },
+    "card_cvv": {
+      "type": "integer"
+    },
+    "expiry_date": {
+      "type": "date"
+    },
+    "card_holder": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
