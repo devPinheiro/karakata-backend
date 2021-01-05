@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_trackers",
+  "info": {
+    "name": "Order_tracker"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "order": {
+      "model": "orders"
+    },
+    "order_destination": {
+      "type": "string"
+    },
+    "isFulfilled": {
+      "type": "boolean"
+    },
+    "order_status": {
+      "type": "string"
+    }
+  }
+}

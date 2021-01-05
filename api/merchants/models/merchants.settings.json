@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "merchants",
+  "info": {
+    "name": "Merchants"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "merchant_support_email": {
+      "type": "email"
+    },
+    "merchant_name": {
+      "type": "string"
+    },
+    "merchant_description": {
+      "type": "text"
+    },
+    "merchant_access_token": {
+      "type": "string"
+    },
+    "orders": {
+      "via": "merchant_ids",
+      "collection": "orders"
+    }
+  }
+}
